@@ -15,7 +15,7 @@ def create_app(debug: bool = False) -> Flask:
     app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'fallback-insecure-key-for-development-only')
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
         'DATABASE_URL',
-        'sqlite:///database.db'  # fallback — только для локальной разработки
+        'sqlite:///database.db'
     )
 
     # Initialize extensions
